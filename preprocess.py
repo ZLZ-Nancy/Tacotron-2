@@ -2,7 +2,7 @@ import argparse
 import os
 from multiprocessing import cpu_count
 
-from datasets import preprocessor
+from datasets import LJSpeech, Biaobei
 from hparams import hparams
 from tqdm import tqdm
 
@@ -14,8 +14,12 @@ def preprocess(args, input_folders, out_dir, hparams):
 	os.makedirs(mel_dir, exist_ok=True)
 	os.makedirs(wav_dir, exist_ok=True)
 	os.makedirs(linear_dir, exist_ok=True)
-	metadata = preprocessor.build_from_path(hparams, input_folders, mel_dir, linear_dir, wav_dir, args.n_jobs, tqdm=tqdm)
-	write_metadata(metadata, out_dir)
+	if args.dataset == 'Biaobei':
+		metadata = Biaobei.build_from_path(hparams, input_folders, mel_dir, linear_dir, wav_dir, args.n_jobs, tqdm=tqdm)
+		write_metadata(metadata, out_dir)
+	elif args.dataset == 'LJSpeech-1.1':
+		metadata = LJSpeech.build_from_path(hparams, input_folders, mel_dir, linear_dir, wav_dir, args.n_jobs, tqdm=tqdm)
+		write_metadata(metadata, out_dir)
 
 def write_metadata(metadata, out_dir):
 	with open(os.path.join(out_dir, 'train.txt'), 'w', encoding='utf-8') as f:
@@ -36,13 +40,16 @@ def norm_data(args):
 	merge_books = (args.merge_books=='True')
 
 	print('Selecting data folders..')
-	supported_datasets = ['LJSpeech-1.0', 'LJSpeech-1.1', 'M-AILABS']
+	supported_datasets = ['LJSpeech-1.0', 'LJSpeech-1.1', 'M-AILABS', 'Biaobei']
 	if args.dataset not in supported_datasets:
 		raise ValueError('dataset value entered {} does not belong to supported datasets: {}'.format(
 			args.dataset, supported_datasets))
 
 	if args.dataset.startswith('LJSpeech'):
 		return [os.path.join(args.base_dir, args.dataset)]
+
+	if args.dataset.startswith('Biaobei'):
+		return [os.path.join(args.base_dir, 'Biaobei')]
 
 
 	if args.dataset == 'M-AILABS':
