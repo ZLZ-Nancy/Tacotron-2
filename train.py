@@ -11,7 +11,7 @@ from tacotron.train import tacotron_train
 from wavenet_vocoder.train import wavenet_train
 
 log = infolog.log
-os.environ["CUDA_VISIBLE_DEVICES"] = "7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2, 3, 4, 5, 6, 7"
 
 
 def save_seq(file, sequence, input_path):
