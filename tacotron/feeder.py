@@ -196,6 +196,8 @@ class Feeder:
 		return (input_data, mel_target, token_target, linear_target, len(mel_target))
 
 	def _prepare_batch(self, batches, outputs_per_step):
+		print(len(batches))
+		print(self._hparams.tacotron_num_gpus)
 		assert 0 == len(batches) % self._hparams.tacotron_num_gpus
 		size_per_device = int(len(batches) / self._hparams.tacotron_num_gpus)
 		np.random.shuffle(batches)
