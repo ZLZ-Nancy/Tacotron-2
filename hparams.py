@@ -340,30 +340,32 @@ hparams = tf.contrib.training.HParams(
 	#Eval/Debug parameters
 	#Eval sentences (if no eval text file was specified during synthesis, these sentences are used for eval)
 	sentences = [
-	# From July 8, 2017 New York Times:
-	'Scientists at the CERN laboratory say they have discovered a new particle.',
-	'There\'s a way to measure the acute emotional intelligence that has never gone out of style.',
-	'President Trump met with other leaders at the Group of 20 conference.',
-	'The Senate\'s bill to repeal and replace the Affordable Care Act is now imperiled.',
-	# From Google's Tacotron example page:
-	'Generative adversarial network or variational auto-encoder.',
-	'Basilar membrane and otolaryngology are not auto-correlations.',
-	'He has read the whole thing.',
-	'He reads books.',
-	'He thought it was time to present the present.',
-	'Thisss isrealy awhsome.',
-	'The big brown fox jumps over the lazy dog.',
-	'Did the big brown fox jump over the lazy dog?',
-	"Peter Piper picked a peck of pickled peppers. How many pickled peppers did Peter Piper pick?",
-	"She sells sea-shells on the sea-shore. The shells she sells are sea-shells I'm sure.",
-	"Tajima Airport serves Toyooka.",
-	#From The web (random long utterance)
-	# 'On offering to help the blind man, the man who then stole his car, had not, at that precise moment, had any evil intention, quite the contrary, \
-	# what he did was nothing more than obey those feelings of generosity and altruism which, as everyone knows, \
-	# are the two best traits of human nature and to be found in much more hardened criminals than this one, a simple car-thief without any hope of advancing in his profession, \
-	# exploited by the real owners of this enterprise, for it is they who take advantage of the needs of the poor.',
-	# A final Thank you note!
-	'Thank you so much for your support!',
+	# # From July 8, 2017 New York Times:
+	# 'Scientists at the CERN laboratory say they have discovered a new particle.',
+	# 'There\'s a way to measure the acute emotional intelligence that has never gone out of style.',
+	# 'President Trump met with other leaders at the Group of 20 conference.',
+	# 'The Senate\'s bill to repeal and replace the Affordable Care Act is now imperiled.',
+	# # From Google's Tacotron example page:
+	# 'Generative adversarial network or variational auto-encoder.',
+	# 'Basilar membrane and otolaryngology are not auto-correlations.',
+	# 'He has read the whole thing.',
+	# 'He reads books.',
+	# 'He thought it was time to present the present.',
+	# 'Thisss isrealy awhsome.',
+	# 'The big brown fox jumps over the lazy dog.',
+	# 'Did the big brown fox jump over the lazy dog?',
+	# "Peter Piper picked a peck of pickled peppers. How many pickled peppers did Peter Piper pick?",
+	# "She sells sea-shells on the sea-shore. The shells she sells are sea-shells I'm sure.",
+	# "Tajima Airport serves Toyooka.",
+	# #From The web (random long utterance)
+	# # 'On offering to help the blind man, the man who then stole his car, had not, at that precise moment, had any evil intention, quite the contrary, \
+	# # what he did was nothing more than obey those feelings of generosity and altruism which, as everyone knows, \
+	# # are the two best traits of human nature and to be found in much more hardened criminals than this one, a simple car-thief without any hope of advancing in his profession, \
+	# # exploited by the real owners of this enterprise, for it is they who take advantage of the needs of the poor.',
+	# # A final Thank you note!
+	# 'Thank you so much for your support!',
+    'ka2 er2 pu3 pei2 wai4 sun1 wan2 hua2 ti1',
+    'jia2 yu3 cun1 yan2 bie2 zai4 yong1 bao4 wo3'
 	],
 
 	#Wavenet Debug
