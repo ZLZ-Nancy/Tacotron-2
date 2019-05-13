@@ -154,17 +154,17 @@ class Synthesizer:
 			#Take off the batch wise padding
 			mels = [mel[:target_length, :] for mel, target_length in zip(mels, target_lengths)]
 			linears = [linear[:target_length, :] for linear, target_length in zip(linears, target_lengths)]
-			middle = []
-			for arr in linears:
-				arr = np.clip(arr, T2_output_range[0], T2_output_range[1])
-				middle.append(arr)
-			linears=middle
+			# middle = []
+			# for arr in linears:
+			# 	arr = np.clip(arr, T2_output_range[0], T2_output_range[1])
+			# 	middle.append(arr)
+			# linears=middle
 			assert len(mels) == len(linears) == len(texts)
-		middle_mel = []
-		for arry in mels:
-			arry = np.clip(arry, T2_output_range[0], T2_output_range[1])
-			middle_mel.append(arry)
-		mels = middle_mel
+		# middle_mel = []
+		# for arry in mels:
+		# 	arry = np.clip(arry, T2_output_range[0], T2_output_range[1])
+		# 	middle_mel.append(arry)
+		# mels = middle_mel
 
 		if basenames is None:
 			#Generate wav and read it
