@@ -155,6 +155,7 @@ class Synthesizer:
 			mels = [mel[:target_length, :] for mel, target_length in zip(mels, target_lengths)]
 			linears = [linear[:target_length, :] for linear, target_length in zip(linears, target_lengths)]
 			linears = np.array(linears)
+			print(linears,T2_output_range[0],T2_output_range[1])
 			linears = np.clip(linears, T2_output_range[0], T2_output_range[1])
 			assert len(mels) == len(linears) == len(texts)
 
