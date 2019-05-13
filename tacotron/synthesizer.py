@@ -165,7 +165,6 @@ class Synthesizer:
 			arry = np.clip(arry, T2_output_range[0], T2_output_range[1])
 			middle_mel.append(arry)
 		mels = middle_mel
-		mels = np.clip(mels, T2_output_range[0], T2_output_range[1])
 
 		if basenames is None:
 			#Generate wav and read it
