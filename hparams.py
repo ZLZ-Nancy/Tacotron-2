@@ -365,6 +365,10 @@ hparams = tf.contrib.training.HParams(
 	# # A final Thank you note!
 	# 'Thank you so much for your support!',
     'mou2 shi4 ren2 gong1 zhi4 neng2 xiang4 mu4 bu4',
+	'ling2 yv3',
+	'zhao4 lian2 zi3',
+	'xu3 yan4 min3',
+	'shao4 mei3 ling2'
 	],
 
 	#Wavenet Debug
