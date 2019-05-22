@@ -364,7 +364,10 @@ hparams = tf.contrib.training.HParams(
 	# # exploited by the real owners of this enterprise, for it is they who take advantage of the needs of the poor.',
 	# # A final Thank you note!
 	# 'Thank you so much for your support!',
-    'da2 jia3 hao4 wo4 jiao5 xiao4 fang2'
+    'wo3 hui2 you4 heng1 heng5 zuo3 heng1 heng5',
+	'wu2 yun2 bao2 nai3 nai5 tiao1 xuan3 pi2 pa2',
+	'da4 jia1 hao3',
+	'wo3 jiao4 xiao3 fang5'
 	],
 
 	#Wavenet Debug
